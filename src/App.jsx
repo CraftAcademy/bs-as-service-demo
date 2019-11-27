@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import { getSentence } from './modules/bullShit'
+import { getSentence, getParagraph, getQuote } from './modules/bullShit'
 
 class App extends Component {
   state = {
-    randomBS: getSentence()
+    randomBS: getParagraph()
   }
 
   getNewBS = () => {
-    this.setState({randomBS: getSentence()})
+    this.setState({randomBS: getParagraph()})
   }
 
   render() {

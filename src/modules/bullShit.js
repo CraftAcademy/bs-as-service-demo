@@ -302,7 +302,7 @@ const getSentence = () => {
   return expandBSFormat(word_source, our_format);
 }
 
-function getParagraph() {
+const getParagraph = () => {
   var word_source = new RandomizedWordList();
   
   var lead_format = pickOne(paragraph_lead_formats);
@@ -318,7 +318,7 @@ function getParagraph() {
   return paragraph.join(" ");
 }
 
-function getQuote(company_name) {
+const getQuote = (company_name) => {
   company_name = company_name || "Initrode";
 
   var word_source = new RandomizedWordList({company: company_name});
@@ -340,4 +340,4 @@ function getName() {
 // module.exports.getQuote     = getQuote;
 // module.exports.getName      = getName;
 
-export { getSentence }
+export { getSentence, getQuote, getParagraph }
